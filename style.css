@@ -411,6 +411,16 @@ section {
 }
 
 /* LOKASI */
+.lokasi .section-title,
+.rsvp .section-title {
+    color: var(--krem);
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(24px, 5vw, 36px);
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
 .lokasi iframe {
     width: 100%;
     max-width: 600px;
@@ -428,26 +438,49 @@ section {
 
 /* RSVP */
 .rsvp {
-    background: #211914;
+    background:
+        radial-gradient(ellipse at top, rgba(182, 137, 91, .12), transparent 55%),
+        #211914;
 }
 
 .rsvp-form {
     max-width: 500px;
     margin: 25px auto 0;
+    padding: clamp(20px, 5vw, 35px);
+    border: 1px solid rgba(230, 196, 154, .35);
+    border-radius: 16px;
+    background: rgba(23, 18, 15, .72);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .22);
 }
 
 .rsvp-form input,
 .rsvp-form select,
 .rsvp-form textarea {
     width: 100%;
-    padding: 13px;
-    margin-bottom: 13px;
-    background: transparent;
-    border: 1px solid var(--cokelat);
+    padding: 14px 15px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, .035);
+    border: 1px solid rgba(230, 196, 154, .35);
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
+    letter-spacing: .03em;
+    transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.rsvp-form input::placeholder,
+.rsvp-form textarea::placeholder {
+    color: rgba(238, 224, 208, .68);
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus {
+    outline: none;
+    border-color: var(--krem);
+    background: rgba(255, 255, 255, .06);
+    box-shadow: 0 0 0 3px rgba(230, 196, 154, .12);
 }
 
 .rsvp-form select option {
@@ -457,6 +490,19 @@ section {
 .rsvp-form textarea {
     min-height: 100px;
     resize: vertical;
+}
+
+.rsvp-form .tombol {
+    width: 100%;
+    margin-top: 2px;
+    padding: 14px 20px;
+    font-weight: 600;
+    letter-spacing: .12em;
+}
+
+.rsvp-form .tombol:hover {
+    opacity: 1;
+    background: #c69a6b;
 }
 
 /* AMPLOP DIGITAL */
